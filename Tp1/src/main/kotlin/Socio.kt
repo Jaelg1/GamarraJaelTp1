@@ -14,9 +14,6 @@ class Socio(
     var enfermedad: Boolean,
     var medicamentos: Boolean,
     var categoria:String
-    ) {
-    fun LiqCuotas(ListaActivos, ListaPasivos){
-        var SocActivo=300
-        var SocPasivo=250
-    }
-}
+    ) {}
+
+

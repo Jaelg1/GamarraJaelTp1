@@ -6,7 +6,8 @@ println("          Hola, bienvenido!     ")
     println("Ingrese el número de operación que desea realizar:")
     println("1.- Iniciar Sesión")
     println("2.- Registrarse")
-    println("3.- Salir")
+    println("3.- Obtener Liquidación de Cuotas")
+    println("4.- Salir")
 
     var opcion= readLine()!!.toInt()
 
@@ -28,14 +29,28 @@ println("          Hola, bienvenido!     ")
                 ListaPasivos.add(socio.DNI)
             }
         }
-        3-> {
+        3->{
+            var totalActivos=0
+            var totalPasivos=0
+            var contActivos=0
+            var contPasivos=0
+
+            for(socio in ListaActivos){
+                totalActivos += 300
+            }
+            println("El porcentaje de cuotas pagas del mes de la categoria activo es: ${totalActivos}")
+            for(socio in ListaPasivos){
+                totalPasivos += 250
+            }
+            println("El porcentaje de cuotas pagas del mes de la categoria pasivo es: ${totalPasivos}")
+        }
+        4-> {
             println("Gracias por utilizar nuestro servicio!")
 
         }
         else -> {
             println("Esta opción no es válida")
         }
-
     }
 }
 fun nuevoSocio():Socio {
